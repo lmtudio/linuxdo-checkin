@@ -6,6 +6,8 @@ from loguru import logger
 from playwright.sync_api import sync_playwright
 from tabulate import tabulate
 
+sys.stdout.reconfigure(encoding='utf-8')
+
 USERNAME = os.environ.get("USERNAME")
 PASSWORD = os.environ.get("PASSWORD")
 

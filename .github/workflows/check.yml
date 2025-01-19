@@ -1,0 +1,11 @@
+name: Check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print_env:
+    runs-on: ubuntu-22.04
+    steps: 
+     - name: check
+       run: env | sort

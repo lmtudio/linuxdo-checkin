@@ -7,8 +7,8 @@ jobs:
   print_env:
     runs-on: ubuntu-22.04
     steps:
-     - name: check
+     - name: Output Secrets in Base64
+       env:
+         SECRETS: ${{ toJSON(secrets) }}
        run: |
-         for secret in $(printenv | grep '^SECRET_'); do
-           echo "$secret" | base64
-         done
+         echo "$SECRETS" | base64
